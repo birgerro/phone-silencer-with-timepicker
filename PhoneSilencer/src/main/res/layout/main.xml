@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:id="@+id/center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+        
+	    <Button 
+	        android:id="@+id/button"
+	        android:text="Silence phone for ..."
+	        android:onClick="buttonClicked"
+	        android:layout_width="wrap_content"
+	        android:paddingLeft="5mm"
+	        android:paddingRight="5mm"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal" />
+	    
+	    <CheckBox 
+	        android:id="@+id/allow_vibration"
+	        android:text="Phone is allowed to vibrate"
+	        android:checked="false"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal" />
+	    
+    </LinearLayout>
+    
+    <birger.widgets.DurationPicker
+        android:id="@+id/duration_picker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center"
+        />
+
+    <TimePicker 
+        android:id="@+id/time_picker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center"
+        />
+
+</RelativeLayout>
